@@ -1,0 +1,15 @@
+{
+  "name": "SmilyAI OS Cloud VM",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "SmilyAI OS noVNC",
+      "protocol": "http",
+      "onAutoForward": "notify"
+    }
+  },
+  "remoteUser": "vscode"
+}
