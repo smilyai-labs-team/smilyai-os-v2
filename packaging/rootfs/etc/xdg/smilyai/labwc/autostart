@@ -1,6 +1,6 @@
 #!/bin/sh
 # Keep native authorization/recovery independent of the shell services.
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+/usr/bin/lxpolkit &
 # Compositor exports WAYLAND_DISPLAY only after it has started.
 if ! /usr/local/bin/smilyai-session-environment; then
     exit 1
