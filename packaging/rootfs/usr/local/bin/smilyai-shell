@@ -1,0 +1,4 @@
+#!/bin/sh
+# One checked launcher for systemd and manual labwc-terminal use.
+set -eu
+exec /usr/bin/python3 /opt/smilyai-os/smilyai/shell_launcher.py "$@"

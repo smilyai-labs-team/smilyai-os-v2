@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+export XDG_CURRENT_DESKTOP=SmilyAI
+export XDG_SESSION_DESKTOP=SmilyAI
+export XDG_SESSION_TYPE=wayland
+trap 'systemctl --user stop smilyai-shell.service smilyai-ui.service smilyai-harness.service graphical-session.target || true' EXIT
+labwc -C /etc/xdg/smilyai/labwc

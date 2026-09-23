@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <theme><name>Clearlooks</name><cornerRadius>14</cornerRadius></theme>
+  <keyboard>
+    <default/>
+    <keybind key="W-Return"><action name="Execute" command="foot"/></keybind>
+    <keybind key="W-e"><action name="Execute" command="thunar"/></keybind>
+    <keybind key="W-n"><action name="Execute" command="nm-connection-editor"/></keybind>
+    <keybind key="W-r"><action name="Execute" command="smilyai-recover"/></keybind>
+    <keybind key="W-space"><action name="ForEach"><query identifier="smilyai-shell"/><then><action name="Focus"/><action name="Raise"/></then></action></keybind>
+  </keyboard>
+  <mouse><default/></mouse>
+  <windowRules>
+    <windowRule identifier="smilyai-shell" serverDecoration="no"><action name="Maximize"/></windowRule>
+  </windowRules>
+</labwc_config>

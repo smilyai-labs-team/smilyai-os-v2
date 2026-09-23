@@ -1,0 +1,20 @@
+#!/bin/sh
+# Called INSIDE labwc, after it exports the compositor sockets.
+set -eu
+if [ -z "${WAYLAND_DISPLAY:-}" ] || [ -z "${XDG_RUNTIME_DIR:-}" ]; then
+    echo "smilyai-session [display] Missing Wayland session environment; open a labwc terminal." >&2
+    exit 1
+fi
+# Empty values replace a previous session's stale XWayland/auth variables.
+export DISPLAY="${DISPLAY:-}" XAUTHORITY="${XAUTHORITY:-}"
+export XDG_CURRENT_DESKTOP="${XDG_CURRENT_DESKTOP:-SmilyAI}"
+export XDG_SESSION_DESKTOP="${XDG_SESSION_DESKTOP:-SmilyAI}"
+export XDG_SESSION_TYPE=wayland
+if ! dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XAUTHORITY XDG_RUNTIME_DIR XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE; then
+    echo "smilyai-session [environment] D-Bus import failed; trying the user service manager directly." >&2
+fi
+if ! systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XAUTHORITY XDG_RUNTIME_DIR XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE; then
+    echo "smilyai-session [environment] User-manager import failed; services not started. Native recovery remains available." >&2
+    exit 1
+fi
+echo "smilyai-session [environment] Compositor environment imported." >&2

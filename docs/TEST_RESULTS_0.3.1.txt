@@ -1,0 +1,159 @@
+Executed: bash scripts/check.sh
+Date: 2026-09-22
+Revision: 0.3.1 graphical startup fix
+Exit code: 0
+
+test_boolean_approval_required (test_api_revision.APIRevisionTests.test_boolean_approval_required) ... ok
+test_cross_origin_blocked (test_api_revision.APIRevisionTests.test_cross_origin_blocked) ... ok
+test_dns_rebinding_blocked (test_api_revision.APIRevisionTests.test_dns_rebinding_blocked) ... ok
+test_job_local_tool_roundtrip (test_api_revision.APIRevisionTests.test_job_local_tool_roundtrip) ... ok
+test_key_never_in_bootstrap (test_api_revision.APIRevisionTests.test_key_never_in_bootstrap) ... ok
+test_malformed_tool_no_execution (test_api_revision.APIRevisionTests.test_malformed_tool_no_execution) ... ok
+test_session_required (test_api_revision.APIRevisionTests.test_session_required) ... ok
+test_settings_do_not_expand_file_scope (test_api_revision.APIRevisionTests.test_settings_do_not_expand_file_scope) ... ok
+test_static_shell_survives_backend_unavailable (test_api_revision.APIRevisionTests.test_static_shell_survives_backend_unavailable) ... ok
+test_persists_and_merges (test_config.ConfigTests.test_persists_and_merges) ... ok
+test_image_services_keep_agent_unprivileged (test_image_packaging.ImagePackagingTests.test_image_services_keep_agent_unprivileged) ... ok
+test_pi_profile_exports_flashable_image_with_hardware_tools (test_image_packaging.ImagePackagingTests.test_pi_profile_exports_flashable_image_with_hardware_tools) ... ok
+test_x86_profile_is_hybrid_and_installable (test_image_packaging.ImagePackagingTests.test_x86_profile_is_hybrid_and_installable) ... ok
+test_blocks_escape_and_symlink (test_paths_files.PathAndFileTests.test_blocks_escape_and_symlink) ... ok
+test_end_to_end_folder_creation (test_paths_files.PathAndFileTests.test_end_to_end_folder_creation) ... ok
+test_admin_requires_phrase (test_permissions.PermissionTests.test_admin_requires_phrase) ... ok
+test_confirmation_is_single_use (test_permissions.PermissionTests.test_confirmation_is_single_use) ... ok
+test_low_risk_is_immediate (test_permissions.PermissionTests.test_low_risk_is_immediate) ... ok
+test_failed_provider_does_not_infer_an_action (test_provider_agent.ProviderAgentTests.test_failed_provider_does_not_infer_an_action) ... ok
+test_mock_emits_structured_tool_call (test_provider_agent.ProviderAgentTests.test_mock_emits_structured_tool_call) ... ok
+test_registry_executes_only_registered_schema (test_provider_agent.ProviderAgentTests.test_registry_executes_only_registered_schema) ... ok
+test_bad_model_list (test_provider_streaming.ProviderTests.test_bad_model_list) ... ok
+test_cancel (test_provider_streaming.ProviderTests.test_cancel) ... ok
+test_comment_and_multiline_event (test_provider_streaming.ProviderTests.test_comment_and_multiline_event) ... ok
+test_duplicate_call_ids (test_provider_streaming.ProviderTests.test_duplicate_call_ids) ... ok
+test_endpoint_scoped_key (test_provider_streaming.ProviderTests.test_endpoint_scoped_key) ... ok
+test_endpoint_validation (test_provider_streaming.ProviderTests.test_endpoint_validation) ... ok
+test_fragmented_tool (test_provider_streaming.ProviderTests.test_fragmented_tool) ... ok
+test_interrupted_never_returns_tools (test_provider_streaming.ProviderTests.test_interrupted_never_returns_tools) ... ok
+test_invalid_key_and_rate_limit_are_redacted (test_provider_streaming.ProviderTests.test_invalid_key_and_rate_limit_are_redacted) ... ok
+test_malformed_arguments (test_provider_streaming.ProviderTests.test_malformed_arguments) ... ok
+test_malformed_json (test_provider_streaming.ProviderTests.test_malformed_json) ... ok
+test_missing_done_rejected (test_provider_streaming.ProviderTests.test_missing_done_rejected) ... ok
+test_model_listing (test_provider_streaming.ProviderTests.test_model_listing) ... ok
+test_nonobject_arguments (test_provider_streaming.ProviderTests.test_nonobject_arguments) ... ok
+test_nonstreaming (test_provider_streaming.ProviderTests.test_nonstreaming) ... ok
+test_redirect_is_refused (test_provider_streaming.ProviderTests.test_redirect_is_refused) ... ok
+test_size_bound (test_provider_streaming.ProviderTests.test_size_bound) ... ok
+test_smilyai_default (test_provider_streaming.ProviderTests.test_smilyai_default) ... ok
+test_text_stream (test_provider_streaming.ProviderTests.test_text_stream) ... ok
+test_truncated_finish_rejected (test_provider_streaming.ProviderTests.test_truncated_finish_rejected) ... ok
+test_audit_redaction (test_revision_security.ConfigSecurityTests.test_audit_redaction) ... ok
+test_first_and_subsequent_boot (test_revision_security.ConfigSecurityTests.test_first_and_subsequent_boot) ... ok
+test_malformed_config_recovers (test_revision_security.ConfigSecurityTests.test_malformed_config_recovers) ... ok
+test_no_keyring_memory_only (test_revision_security.ConfigSecurityTests.test_no_keyring_memory_only) ... ok
+test_permission_arguments_are_immutable (test_revision_security.ConfigSecurityTests.test_permission_arguments_are_immutable) ... ok
+test_permission_expires (test_revision_security.ConfigSecurityTests.test_permission_expires) ... ok
+test_reject_secret_and_bad_types (test_revision_security.ConfigSecurityTests.test_reject_secret_and_bad_types) ... ok
+test_save_rollback (test_revision_security.ConfigSecurityTests.test_save_rollback) ... ok
+test_stt_must_be_local (test_revision_security.ConfigSecurityTests.test_stt_must_be_local) ... ok
+test_cannot_delete_root_or_permanently (test_revision_security.FilesSecurityTests.test_cannot_delete_root_or_permanently) ... ok
+test_copy_no_overwrite (test_revision_security.FilesSecurityTests.test_copy_no_overwrite) ... ok
+test_hidden_and_parent_paths_blocked (test_revision_security.FilesSecurityTests.test_hidden_and_parent_paths_blocked) ... ok
+test_move_no_overwrite (test_revision_security.FilesSecurityTests.test_move_no_overwrite) ... ok
+test_recursive_copy_disabled (test_revision_security.FilesSecurityTests.test_recursive_copy_disabled) ... ok
+test_trash_metadata (test_revision_security.FilesSecurityTests.test_trash_metadata) ... ok
+test_cancel_before_tool (test_revision_security.LoopTests.test_cancel_before_tool) ... ok
+test_entire_batch_validated_before_execution (test_revision_security.LoopTests.test_entire_batch_validated_before_execution) ... ok
+test_observation_returns_to_model (test_revision_security.LoopTests.test_observation_returns_to_model) ... ok
+test_permission_approved_resumes (test_revision_security.LoopTests.test_permission_approved_resumes) ... ok
+test_permission_denied_stops (test_revision_security.LoopTests.test_permission_denied_stops) ... ok
+test_step_bound (test_revision_security.LoopTests.test_step_bound) ... ok
+test_rejects_unknown_and_out_of_range (test_schema.SchemaTests.test_rejects_unknown_and_out_of_range) ... ok
+test_validates_and_applies_defaults (test_schema.SchemaTests.test_validates_and_applies_defaults) ... ok
+test_intent_provider_validation_permission_and_execution_flow (test_server_e2e.ServerEndToEndTests.test_intent_provider_validation_permission_and_execution_flow) ... ok
+test_absolute_wayland_socket_supported (test_shell_startup.LauncherTests.test_absolute_wayland_socket_supported) ... ok
+test_browser_exec_failure_categorized (test_shell_startup.LauncherTests.test_browser_exec_failure_categorized) ... ok
+test_browser_exit_failure_retained_and_logged (test_shell_startup.LauncherTests.test_browser_exit_failure_retained_and_logged) ... ok
+test_browser_normal_exit_is_not_error (test_shell_startup.LauncherTests.test_browser_normal_exit_is_not_error) ... ok
+test_browser_signal_failure_normalized (test_shell_startup.LauncherTests.test_browser_signal_failure_normalized) ... ok
+test_chromium_browser_package_variant (test_shell_startup.LauncherTests.test_chromium_browser_package_variant) ... ok
+test_concrete_flag_and_sandbox_preserved (test_shell_startup.LauncherTests.test_concrete_flag_and_sandbox_preserved) ... ok
+test_delayed_display_socket (test_shell_startup.LauncherTests.test_delayed_display_socket) ... skipped 'Host policy prohibits Unix stream sockets; run on the Linux release host'
+test_developer_entry_forwards_arguments (test_shell_startup.LauncherTests.test_developer_entry_forwards_arguments) ... ok
+test_diagnose_checks_without_browser_launch (test_shell_startup.LauncherTests.test_diagnose_checks_without_browser_launch) ... ok
+test_display_timeout_bounded (test_shell_startup.LauncherTests.test_display_timeout_bounded) ... ok
+test_environment_import_includes_xauthority_and_checks_failure (test_shell_startup.LauncherTests.test_environment_import_includes_xauthority_and_checks_failure) ... ok
+test_explicit_software_recovery_does_not_disable_sandbox (test_shell_startup.LauncherTests.test_explicit_software_recovery_does_not_disable_sandbox) ... ok
+test_explicit_x11_recovery (test_shell_startup.LauncherTests.test_explicit_x11_recovery) ... ok
+test_foreign_wayland_socket_rejected (test_shell_startup.LauncherTests.test_foreign_wayland_socket_rejected) ... ok
+test_malformed_or_wrong_server_never_becomes_ready (test_shell_startup.LauncherTests.test_malformed_or_wrong_server_never_becomes_ready) ... ok
+test_manual_entry_and_service_use_identical_launch_logic (test_shell_startup.LauncherTests.test_manual_entry_and_service_use_identical_launch_logic) ... ok
+test_missing_chromium_is_distinct (test_shell_startup.LauncherTests.test_missing_chromium_is_distinct) ... ok
+test_missing_or_invalid_display_is_diagnosed (test_shell_startup.LauncherTests.test_missing_or_invalid_display_is_diagnosed) ... ok
+test_mocked_display_connection_checks_socket (test_shell_startup.LauncherTests.test_mocked_display_connection_checks_socket) ... ok
+test_prefers_wayland_session_over_available_x11 (test_shell_startup.LauncherTests.test_prefers_wayland_session_over_available_x11) ... ok
+test_profile_foreign_owner_refused (test_shell_startup.LauncherTests.test_profile_foreign_owner_refused) ... ok
+test_profile_private_and_chromium_lock_not_deleted (test_shell_startup.LauncherTests.test_profile_private_and_chromium_lock_not_deleted) ... ok
+test_profile_symlink_refused (test_shell_startup.LauncherTests.test_profile_symlink_refused) ... ok
+test_readiness_redirect_is_not_followed (test_shell_startup.LauncherTests.test_readiness_redirect_is_not_followed) ... ok
+test_readiness_wait_tolerates_45_second_vm_start (test_shell_startup.LauncherTests.test_readiness_wait_tolerates_45_second_vm_start) ... ok
+test_real_wayland_style_socket_connects (test_shell_startup.LauncherTests.test_real_wayland_style_socket_connects) ... skipped 'Host policy prohibits Unix stream sockets; run on the Linux release host'
+test_regular_file_cannot_impersonate_display (test_shell_startup.LauncherTests.test_regular_file_cannot_impersonate_display) ... ok
+test_relative_profile_refused (test_shell_startup.LauncherTests.test_relative_profile_refused) ... ok
+test_restart_policy_and_native_recovery_contract (test_shell_startup.LauncherTests.test_restart_policy_and_native_recovery_contract) ... ok
+test_root_is_refused_without_launch (test_shell_startup.LauncherTests.test_root_is_refused_without_launch) ... ok
+test_unavailable_ui_deadline_is_exact (test_shell_startup.LauncherTests.test_unavailable_ui_deadline_is_exact) ... ok
+test_x11_session_does_not_use_stale_wayland_variable (test_shell_startup.LauncherTests.test_x11_session_does_not_use_stale_wayland_variable) ... ok
+test_chromium_sandbox_not_disabled (test_staging.StagingTests.test_chromium_sandbox_not_disabled) ... ok
+test_manual_builds_no_password_artifact (test_staging.StagingTests.test_manual_builds_no_password_artifact) ... ok
+test_staged_runtime_and_services (test_staging.StagingTests.test_staged_runtime_and_services) ... ok
+test_hardware_detection_is_graceful (test_system_hardware.SystemHardwareTests.test_hardware_detection_is_graceful) ... ok
+test_system_info_and_memory (test_system_hardware.SystemHardwareTests.test_system_info_and_memory) ... ok
+test_datagram_address_and_payload_encoding (test_ui_readiness.ServiceNotifyTests.test_datagram_address_and_payload_encoding) ... ok
+test_manual_launch_without_notify_socket_is_supported (test_ui_readiness.ServiceNotifyTests.test_manual_launch_without_notify_socket_is_supported) ... ok
+test_missing_notify_socket_does_not_claim_success (test_ui_readiness.ServiceNotifyTests.test_missing_notify_socket_does_not_claim_success) ... ok
+test_real_abstract_datagram (test_ui_readiness.ServiceNotifyTests.test_real_abstract_datagram) ... skipped 'Host prohibits AF_UNIX datagram sockets: [Errno 1] Operation not permitted'
+test_real_filesystem_datagram (test_ui_readiness.ServiceNotifyTests.test_real_filesystem_datagram) ... skipped 'Host prohibits AF_UNIX datagram sockets: [Errno 1] Operation not permitted'
+test_asset_removed_after_start_changes_readyz_to_503 (test_ui_readiness.UIReadinessTests.test_asset_removed_after_start_changes_readyz_to_503) ... ok
+test_backend_outage_does_not_remove_readiness (test_ui_readiness.UIReadinessTests.test_backend_outage_does_not_remove_readiness) ... ok
+test_empty_asset_is_rejected (test_ui_readiness.UIReadinessTests.test_empty_asset_is_rejected) ... ok
+test_head_api_does_not_proxy (test_ui_readiness.UIReadinessTests.test_head_api_does_not_proxy) ... ok
+test_main_never_notifies_on_asset_failure (test_ui_readiness.UIReadinessTests.test_main_never_notifies_on_asset_failure) ... ok
+test_main_never_notifies_when_actual_bind_fails (test_ui_readiness.UIReadinessTests.test_main_never_notifies_when_actual_bind_fails) ... ok
+test_main_notifies_only_with_bound_validated_server (test_ui_readiness.UIReadinessTests.test_main_notifies_only_with_bound_validated_server) ... smilyai-ui [INFO] ready at http://127.0.0.1:47810/; backend availability is independent
+ok
+test_missing_asset_prevents_bind_and_readiness (test_ui_readiness.UIReadinessTests.test_missing_asset_prevents_bind_and_readiness) ... ok
+test_non_loopback_bind_is_refused (test_ui_readiness.UIReadinessTests.test_non_loopback_bind_is_refused) ... ok
+test_readyz_head_has_get_length_without_body (test_ui_readiness.UIReadinessTests.test_readyz_head_has_get_length_without_body) ... ok
+test_readyz_is_backend_independent (test_ui_readiness.UIReadinessTests.test_readyz_is_backend_independent) ... ok
+test_readyz_retains_host_and_origin_guards (test_ui_readiness.UIReadinessTests.test_readyz_retains_host_and_origin_guards) ... ok
+test_root_and_head_work_without_backend (test_ui_readiness.UIReadinessTests.test_root_and_head_work_without_backend) ... ok
+
+----------------------------------------------------------------------
+Ran 121 tests in 9.867s
+
+OK (skipped=4)
+Image definitions: syntax and structural checks passed; image creation not exercised.
+✔ boot has independent bounded fallback (5.369901ms)
+✔ shader/application failure immediately releases splash (2.200625ms)
+✔ reduced motion releases splash immediately (1.614118ms)
+✔ WebGL unavailable does not throw or schedule animation (3.024399ms)
+✔ voice is opt-in; no ambient capture (2.871647ms)
+✔ denied microphone gracefully returns idle (2.636919ms)
+✔ release while microphone permission is pending stops the eventual stream (2.82961ms)
+✔ voice creates a bounded 16kHz PCM WAV (23.817091ms)
+✔ shell renders untrusted content as text, not markup (1.10902ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 383.173764
+Automated source checks passed. This is NOT a hardware or image-boot certification.
+
+Additional check: systemd-analyze --user verify (UI and shell units)
+Result: NOT VERIFIED. Host cannot initialize a user manager:
+Failed to lookup RuntimeDirectory path: No such device or address
+Failed to initialize manager: No such device or address
+
+No labwc/Chromium/QEMU executable is available here. Four AF_UNIX integration tests
+are skipped under host policy; mocked contracts and real HTTP tests passed.

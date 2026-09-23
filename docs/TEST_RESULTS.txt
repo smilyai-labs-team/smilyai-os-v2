@@ -1,0 +1,98 @@
+Executed: bash scripts/check.sh
+Date: 2026-09-22
+Exit code: 0
+
+test_boolean_approval_required (test_api_revision.APIRevisionTests.test_boolean_approval_required) ... ok
+test_cross_origin_blocked (test_api_revision.APIRevisionTests.test_cross_origin_blocked) ... ok
+test_dns_rebinding_blocked (test_api_revision.APIRevisionTests.test_dns_rebinding_blocked) ... ok
+test_job_local_tool_roundtrip (test_api_revision.APIRevisionTests.test_job_local_tool_roundtrip) ... ok
+test_key_never_in_bootstrap (test_api_revision.APIRevisionTests.test_key_never_in_bootstrap) ... ok
+test_malformed_tool_no_execution (test_api_revision.APIRevisionTests.test_malformed_tool_no_execution) ... ok
+test_session_required (test_api_revision.APIRevisionTests.test_session_required) ... ok
+test_settings_do_not_expand_file_scope (test_api_revision.APIRevisionTests.test_settings_do_not_expand_file_scope) ... ok
+test_static_shell_survives_backend_unavailable (test_api_revision.APIRevisionTests.test_static_shell_survives_backend_unavailable) ... ok
+test_persists_and_merges (test_config.ConfigTests.test_persists_and_merges) ... ok
+test_image_services_keep_agent_unprivileged (test_image_packaging.ImagePackagingTests.test_image_services_keep_agent_unprivileged) ... ok
+test_pi_profile_exports_flashable_image_with_hardware_tools (test_image_packaging.ImagePackagingTests.test_pi_profile_exports_flashable_image_with_hardware_tools) ... ok
+test_x86_profile_is_hybrid_and_installable (test_image_packaging.ImagePackagingTests.test_x86_profile_is_hybrid_and_installable) ... ok
+test_blocks_escape_and_symlink (test_paths_files.PathAndFileTests.test_blocks_escape_and_symlink) ... ok
+test_end_to_end_folder_creation (test_paths_files.PathAndFileTests.test_end_to_end_folder_creation) ... ok
+test_admin_requires_phrase (test_permissions.PermissionTests.test_admin_requires_phrase) ... ok
+test_confirmation_is_single_use (test_permissions.PermissionTests.test_confirmation_is_single_use) ... ok
+test_low_risk_is_immediate (test_permissions.PermissionTests.test_low_risk_is_immediate) ... ok
+test_failed_provider_does_not_infer_an_action (test_provider_agent.ProviderAgentTests.test_failed_provider_does_not_infer_an_action) ... ok
+test_mock_emits_structured_tool_call (test_provider_agent.ProviderAgentTests.test_mock_emits_structured_tool_call) ... ok
+test_registry_executes_only_registered_schema (test_provider_agent.ProviderAgentTests.test_registry_executes_only_registered_schema) ... ok
+test_bad_model_list (test_provider_streaming.ProviderTests.test_bad_model_list) ... ok
+test_cancel (test_provider_streaming.ProviderTests.test_cancel) ... ok
+test_comment_and_multiline_event (test_provider_streaming.ProviderTests.test_comment_and_multiline_event) ... ok
+test_duplicate_call_ids (test_provider_streaming.ProviderTests.test_duplicate_call_ids) ... ok
+test_endpoint_scoped_key (test_provider_streaming.ProviderTests.test_endpoint_scoped_key) ... ok
+test_endpoint_validation (test_provider_streaming.ProviderTests.test_endpoint_validation) ... ok
+test_fragmented_tool (test_provider_streaming.ProviderTests.test_fragmented_tool) ... ok
+test_interrupted_never_returns_tools (test_provider_streaming.ProviderTests.test_interrupted_never_returns_tools) ... ok
+test_invalid_key_and_rate_limit_are_redacted (test_provider_streaming.ProviderTests.test_invalid_key_and_rate_limit_are_redacted) ... ok
+test_malformed_arguments (test_provider_streaming.ProviderTests.test_malformed_arguments) ... ok
+test_malformed_json (test_provider_streaming.ProviderTests.test_malformed_json) ... ok
+test_missing_done_rejected (test_provider_streaming.ProviderTests.test_missing_done_rejected) ... ok
+test_model_listing (test_provider_streaming.ProviderTests.test_model_listing) ... ok
+test_nonobject_arguments (test_provider_streaming.ProviderTests.test_nonobject_arguments) ... ok
+test_nonstreaming (test_provider_streaming.ProviderTests.test_nonstreaming) ... ok
+test_redirect_is_refused (test_provider_streaming.ProviderTests.test_redirect_is_refused) ... ok
+test_size_bound (test_provider_streaming.ProviderTests.test_size_bound) ... ok
+test_smilyai_default (test_provider_streaming.ProviderTests.test_smilyai_default) ... ok
+test_text_stream (test_provider_streaming.ProviderTests.test_text_stream) ... ok
+test_truncated_finish_rejected (test_provider_streaming.ProviderTests.test_truncated_finish_rejected) ... ok
+test_audit_redaction (test_revision_security.ConfigSecurityTests.test_audit_redaction) ... ok
+test_first_and_subsequent_boot (test_revision_security.ConfigSecurityTests.test_first_and_subsequent_boot) ... ok
+test_malformed_config_recovers (test_revision_security.ConfigSecurityTests.test_malformed_config_recovers) ... ok
+test_no_keyring_memory_only (test_revision_security.ConfigSecurityTests.test_no_keyring_memory_only) ... ok
+test_permission_arguments_are_immutable (test_revision_security.ConfigSecurityTests.test_permission_arguments_are_immutable) ... ok
+test_permission_expires (test_revision_security.ConfigSecurityTests.test_permission_expires) ... ok
+test_reject_secret_and_bad_types (test_revision_security.ConfigSecurityTests.test_reject_secret_and_bad_types) ... ok
+test_save_rollback (test_revision_security.ConfigSecurityTests.test_save_rollback) ... ok
+test_stt_must_be_local (test_revision_security.ConfigSecurityTests.test_stt_must_be_local) ... ok
+test_cannot_delete_root_or_permanently (test_revision_security.FilesSecurityTests.test_cannot_delete_root_or_permanently) ... ok
+test_copy_no_overwrite (test_revision_security.FilesSecurityTests.test_copy_no_overwrite) ... ok
+test_hidden_and_parent_paths_blocked (test_revision_security.FilesSecurityTests.test_hidden_and_parent_paths_blocked) ... ok
+test_move_no_overwrite (test_revision_security.FilesSecurityTests.test_move_no_overwrite) ... ok
+test_recursive_copy_disabled (test_revision_security.FilesSecurityTests.test_recursive_copy_disabled) ... ok
+test_trash_metadata (test_revision_security.FilesSecurityTests.test_trash_metadata) ... ok
+test_cancel_before_tool (test_revision_security.LoopTests.test_cancel_before_tool) ... ok
+test_entire_batch_validated_before_execution (test_revision_security.LoopTests.test_entire_batch_validated_before_execution) ... ok
+test_observation_returns_to_model (test_revision_security.LoopTests.test_observation_returns_to_model) ... ok
+test_permission_approved_resumes (test_revision_security.LoopTests.test_permission_approved_resumes) ... ok
+test_permission_denied_stops (test_revision_security.LoopTests.test_permission_denied_stops) ... ok
+test_step_bound (test_revision_security.LoopTests.test_step_bound) ... ok
+test_rejects_unknown_and_out_of_range (test_schema.SchemaTests.test_rejects_unknown_and_out_of_range) ... ok
+test_validates_and_applies_defaults (test_schema.SchemaTests.test_validates_and_applies_defaults) ... ok
+test_intent_provider_validation_permission_and_execution_flow (test_server_e2e.ServerEndToEndTests.test_intent_provider_validation_permission_and_execution_flow) ... ok
+test_chromium_sandbox_not_disabled (test_staging.StagingTests.test_chromium_sandbox_not_disabled) ... ok
+test_manual_builds_no_password_artifact (test_staging.StagingTests.test_manual_builds_no_password_artifact) ... ok
+test_staged_runtime_and_services (test_staging.StagingTests.test_staged_runtime_and_services) ... ok
+test_hardware_detection_is_graceful (test_system_hardware.SystemHardwareTests.test_hardware_detection_is_graceful) ... ok
+test_system_info_and_memory (test_system_hardware.SystemHardwareTests.test_system_info_and_memory) ... ok
+
+----------------------------------------------------------------------
+Ran 70 tests in 5.673s
+
+OK
+Image definitions: syntax and structural checks passed; image creation not exercised.
+✔ boot has independent bounded fallback (4.077793ms)
+✔ shader/application failure immediately releases splash (1.173964ms)
+✔ reduced motion releases splash immediately (1.044108ms)
+✔ WebGL unavailable does not throw or schedule animation (1.559787ms)
+✔ voice is opt-in; no ambient capture (2.508511ms)
+✔ denied microphone gracefully returns idle (1.735463ms)
+✔ release while microphone permission is pending stops the eventual stream (2.222018ms)
+✔ voice creates a bounded 16kHz PCM WAV (12.754504ms)
+✔ shell renders untrusted content as text, not markup (1.31702ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 138.568519
+Automated source checks passed. This is NOT a hardware or image-boot certification.

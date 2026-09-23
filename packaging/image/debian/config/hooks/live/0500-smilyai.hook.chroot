@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+systemctl enable NetworkManager.service lightdm.service
+systemctl set-default graphical.target
+# labwc imports its environment before starting user services.
+dpkg-query -W > /opt/smilyai-os/packages.tsv
+test -x /usr/local/bin/smilyai-session
+test -x /usr/local/bin/smilyai-shell
+test -f /usr/share/wayland-sessions/smilyai.desktop
+python3 -m compileall -q /opt/smilyai-os/smilyai

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+lb config noauto \
+  --mode debian --distribution trixie --architectures amd64 \
+  --binary-image iso-hybrid \
+  --archive-areas "main contrib non-free-firmware" \
+  --debian-installer live --debian-installer-gui true \
+  --bootloaders "syslinux grub-efi" \
+  --bootappend-live "boot=live components username=smily hostname=smilyai locales=en_AU.UTF-8 keyboard-layouts=us" \
+  --iso-application "SmilyAI OS" --iso-publisher "SmilyAI" \
+  --iso-volume "SMILYAI_031" --memtest none "${@}"

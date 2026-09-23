@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#edece7"><title>SmilyAI OS</title>
+<link rel="stylesheet" href="/styles.css">
+<script src="/boot.js" defer></script><script src="/orb.js" defer></script><script src="/voice.js" defer></script><script src="/app.js" defer></script>
+</head>
+<body>
+<div class="material" aria-hidden="true"></div><div id="spectral" aria-hidden="true"></div>
+<div id="boot" aria-hidden="true"><div class="boot-light"></div><div class="boot-logo"><img src="/assets/smilyai-logo.png" alt=""><span>SmilyAI <small>OS</small></span></div></div>
+<header class="topbar">
+<button id="homeButton" class="brand" aria-label="Return to SmilyAI"><img src="/assets/smilyai-logo.png" alt=""><span>SmilyAI <b>OS</b></span></button>
+<div class="top-status"><span id="connection">Starting locally</span><span class="divider"></span><time id="clock"></time></div>
+</header>
+<div id="recovery" class="recovery" role="status" hidden><span id="recoveryText">Connecting to your computer…</span><button id="retry">Retry</button><small>Native fallback: Super+E Files · Super+Return Terminal · Super+N Network</small></div>
+<main id="desktop">
+<div class="orb-stage">
+<div class="orb-shadow" aria-hidden="true"></div>
+<button id="orbButton" aria-label="SmilyAI. Tap to type. Hold to speak." aria-describedby="orbHint">
+<span class="orb-fallback" aria-hidden="true"></span><canvas id="orbCanvas" aria-hidden="true"></canvas>
+</button>
+</div>
+<section class="intent" aria-live="polite">
+<p class="eyebrow" id="stateLabel">YOUR COMPUTER, UNDERSTOOD</p>
+<h1 id="responseText">What can I do?</h1>
+<p id="orbHint">Tap the orb to type. Hold Space to speak.</p>
+</section>
+<form id="promptForm" class="prompt" hidden>
+<button type="button" id="attachButton" title="Attach a small text file" aria-label="Attach a text file">＋</button>
+<input id="promptInput" autocomplete="off" maxlength="16000" placeholder="Ask your computer…" aria-label="Your request">
+<button type="button" id="micButton" aria-label="Start or stop push-to-talk" title="Microphone">◎</button>
+<button type="submit" class="send" aria-label="Send request">↑</button>
+<input type="file" id="fileInput" accept=".txt,.md,.csv,.json" hidden>
+</form>
+<div class="task-controls"><button id="stopButton" hidden>■ Stop</button><button id="muteButton" hidden>Mute voice</button></div>
+<div id="suggestions" class="suggestions"><button data-command="What's using my memory?">Check memory ↗</button><button data-command="Show my files">Find my files ↗</button></div>
+</main>
+<nav class="dock" aria-label="Computer controls">
+<button data-panel="files"><span>▱</span>Files</button><button data-panel="apps"><span>▦</span>Apps</button><button data-panel="network"><span>⌁</span>Network</button><button data-panel="activity"><span>◷</span>Activity</button><span class="dock-divider"></span><button data-panel="settings"><span>⚙</span>Settings</button>
+</nav>
+<footer class="signature">PLATINUM EDITION <span>·</span> SmilyAI OS 0.3.1</footer>
+<aside id="surface" class="surface" aria-label="Context panel" hidden><header><div><p class="eyebrow" id="surfaceSubtitle"></p><h2 id="surfaceTitle"></h2></div><button id="closeSurface" aria-label="Close panel">×</button></header><div id="surfaceBody"></div></aside>
+<dialog id="setupDialog" class="setup">
+<form id="setupForm">
+<p class="eyebrow">WELCOME TO YOUR COMPUTER</p><h2>Meet SmilyAI.</h2>
+<p class="lead">Tap the orb to type.<br>Hold it to speak.</p>
+<label>Your name <input id="displayName" maxlength="80" autocomplete="name" placeholder="What should I call you?"></label>
+<p class="fine">This personalises the shell. Your Linux account is managed by the system login/installer.</p>
+<div class="setup-options"><button type="button" id="setupAI">Set up SmilyAI API</button><button type="submit" class="primary">Start without AI →</button></div>
+<label class="toggle"><input type="checkbox" id="setupReduced">Reduce motion and visual effects</label>
+<p class="fine">No account required. Local tools work offline. Voice is optional and off until you enable it.</p>
+</form></dialog>
+<dialog id="settingsDialog" class="settings">
+<header><div><p class="eyebrow">MAKE IT YOURS</p><h2>Settings</h2></div><button id="closeSettings" aria-label="Close settings">×</button></header>
+<div class="settings-layout"><nav aria-label="Settings categories"><button data-settings="ai">Intelligence</button><button data-settings="voice">Voice</button><button data-settings="appearance">Appearance</button><button data-settings="system">System</button></nav>
+<form id="settingsForm"><div id="settingsPane"></div><footer><span id="settingsStatus" role="status"></span><button class="primary" type="submit">Save changes</button></footer></form></div>
+</dialog>
+<dialog id="confirmDialog" class="permission">
+<form method="dialog"><div class="permission-symbol">◇</div><p class="eyebrow">YOU ARE IN CONTROL</p><h2 id="confirmTitle"></h2><p id="confirmDescription"></p><pre id="confirmDetails"></pre><label id="phraseLabel" hidden>Type CONFIRM ADMIN ACTION<input id="confirmPhrase" autocomplete="off"></label><footer><button value="cancel">Cancel</button><button class="primary" value="approve">Allow this action</button></footer></form>
+</dialog>
+<div id="toasts" role="status"></div>
+<noscript><div class="recovery">The shell needs JavaScript. Native controls remain available: Super+Return for Terminal, Super+E for Files.</div></noscript>
+</body></html>

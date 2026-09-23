@@ -1,0 +1,17 @@
+[Unit]
+Description=SmilyAI unprivileged agent
+PartOf=graphical-session.target
+StartLimitIntervalSec=0
+
+[Service]
+WorkingDirectory=/opt/smilyai-os
+Environment=PYTHONPATH=/opt/smilyai-os
+ExecStart=/usr/bin/python3 -m smilyai.server --host 127.0.0.1 --port 47811
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=false
+ReadWritePaths=%h %t
+UMask=0077

@@ -1,0 +1,7 @@
+#!/bin/sh
+# Explicit user action resets the bounded failure policy, then retries services.
+set -eu
+/usr/local/bin/smilyai-session-environment
+systemctl --user reset-failed smilyai-ui.service smilyai-harness.service smilyai-shell.service || true
+systemctl --user start graphical-session.target
+systemctl --user restart smilyai-ui.service smilyai-harness.service smilyai-shell.service

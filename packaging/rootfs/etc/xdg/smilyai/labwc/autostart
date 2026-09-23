@@ -1,0 +1,10 @@
+#!/bin/sh
+# Keep native authorization/recovery independent of the shell services.
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+# Compositor exports WAYLAND_DISPLAY only after it has started.
+if ! /usr/local/bin/smilyai-session-environment; then
+    exit 1
+fi
+systemctl --user start graphical-session.target
+# Do not block labwc autostart while the notify-ready UI starts on a slow VM.
+systemctl --user --no-block start smilyai-harness.service smilyai-ui.service smilyai-shell.service

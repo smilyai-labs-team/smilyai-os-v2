@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=SmilyAI OS
+Comment=Platinum AI-native Wayland session
+Exec=/usr/local/bin/smilyai-session
+Type=Application
+DesktopNames=SmilyAI

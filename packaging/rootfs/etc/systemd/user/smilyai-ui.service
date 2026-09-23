@@ -1,0 +1,23 @@
+[Unit]
+Description=SmilyAI independent shell asset server
+PartOf=graphical-session.target
+StartLimitIntervalSec=30min
+StartLimitBurst=3
+
+[Service]
+Type=notify
+NotifyAccess=main
+TimeoutStartSec=120
+WorkingDirectory=/opt/smilyai-os
+Environment=PYTHONPATH=/opt/smilyai-os
+ExecStart=/usr/bin/python3 -m smilyai.ui_server
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=smilyai-ui
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+UMask=0077
