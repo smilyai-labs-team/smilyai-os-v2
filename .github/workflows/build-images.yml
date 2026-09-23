@@ -1,0 +1,64 @@
+name: Build SmilyAI OS preview images
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        type: choice
+        options: [x86_64, raspberry-pi, both]
+        default: x86_64
+      pi_gen_ref:
+        description: Reviewed full SHA from RPi-Distro/pi-gen arm64 (required for Pi)
+        type: string
+        required: false
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/check.sh
+  x86_64:
+    needs: tests
+    if: inputs.target == 'x86_64' || inputs.target == 'both'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build in Debian 13
+        run: |
+          docker run --rm --privileged -v "$PWD:/work" -w /work debian:trixie bash -ec '
+            apt-get update
+            apt-get install -y live-build python3 xorriso isolinux syslinux-common syslinux-efi grub-pc-bin grub-efi-amd64-bin mtools dosfstools squashfs-tools ca-certificates
+            bash scripts/build-x86-iso.sh
+          '
+      - uses: actions/upload-artifact@v4
+        with:
+          name: smilyai-0.3.1-x86_64-preview
+          path: dist/SmilyAI-OS-0.3.1-x86_64.iso*
+          retention-days: 7
+          if-no-files-found: error
+  raspberry-pi:
+    needs: tests
+    if: inputs.target == 'raspberry-pi' || inputs.target == 'both'
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check private login secret
+        env:
+          SMILYAI_PI_PASSWORD: ${{ secrets.SMILYAI_PI_PASSWORD }}
+        run: test -n "$SMILYAI_PI_PASSWORD"
+      - run: sudo apt-get update && sudo apt-get install -y git python3 openssl xz-utils
+      - name: Build on native ARM64
+        env:
+          PI_GEN_REF: ${{ inputs.pi_gen_ref }}
+          SMILYAI_PI_PASSWORD: ${{ secrets.SMILYAI_PI_PASSWORD }}
+        run: bash scripts/build-rpi-image.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: smilyai-0.3.1-rpi-arm64-preview
+          path: dist/SmilyAI-OS-0.3.1-rpi-arm64.img.xz*
+          retention-days: 7
+          if-no-files-found: error
+# Manual only. No deployment, release publication, or credentials-file upload.
